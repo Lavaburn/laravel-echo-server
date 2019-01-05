@@ -4,10 +4,15 @@
 	"clients": {{ ECHO_CLIENTS }},
 	"database": "redis",
 	"databaseConfig": {
-		"redis": {
-      "port": "{{ ECHO_REDIS_PORT }}",
-      "host": "{{ ECHO_REDIS_HOSTNAME }}"
-		}
+	  "redis": {
+        "port": "{{ ECHO_REDIS_PORT }}",
+        "host": "{{ ECHO_REDIS_HOSTNAME }}",
+        "options": {
+          "db": "{{ ECHO_REDIS_DB }}",
+          "password": "{{ ECHO_REDIS_PASSWORD }}",
+          "keyPrefix": "{{ ECHO_REDIS_PREFIX }}"
+        }
+	  }
 	},
 	"devMode": "{{ ECHO_DEVMODE }}",
 	"host": {{ ECHO_HOST }},

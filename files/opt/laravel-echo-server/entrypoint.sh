@@ -10,6 +10,9 @@ sed -i -e "s%{{ ECHO_AUTH_ENDPOINT }}%$ECHO_AUTH_ENDPOINT%g" laravel-echo-server
 sed -i -e "s%{{ ECHO_CLIENTS }}%$ECHO_CLIENTS%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_REDIS_PORT }}%$ECHO_REDIS_PORT%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_REDIS_HOSTNAME }}%$ECHO_REDIS_HOSTNAME%g" laravel-echo-server.json
+sed -i -e "s%{{ ECHO_REDIS_DB }}%$ECHO_REDIS_DB%g" laravel-echo-server.json
+sed -i -e "s%{{ ECHO_REDIS_PASSWORD }}%$ECHO_REDIS_PASSWORD%g" laravel-echo-server.json
+sed -i -e "s%{{ ECHO_REDIS_PREFIX }}%$ECHO_REDIS_PREFIX%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_DEVMODE }}%$ECHO_DEVMODE%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_HOST }}%$ECHO_HOST%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_PORT }}%$ECHO_PORT%g" laravel-echo-server.json
