@@ -1,5 +1,6 @@
-FROM node:latest
+FROM node:8-alpine
 MAINTAINER Jessica Smith <jessica.smith@fasthosts.com>
+MAINTAINER Nicolas Truyens <nicolas@truyens.com>
 
 COPY files /
 RUN \
@@ -9,8 +10,10 @@ RUN \
 
 EXPOSE 6001
 ENV \
-	LARAVEL_ECHO_SERVER_AUTH_HOST=http://localhost \
-	LARAVEL_ECHO_SERVER_DEBUG=false \
+	ECHO_AUTH_HOST=http://localhost \
+	ECHO_AUTH_ENDPOINT=/broadcasting/auth \
+	ECHO_HOST=null \
+	ECHO_PORT=6001 \
 	ECHO_SSL_CERT_PATH= \
 	ECHO_SSL_KEY_PATH= \
 	ECHO_SSL_CHAIN_PATH= \

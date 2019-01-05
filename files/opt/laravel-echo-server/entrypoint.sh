@@ -5,10 +5,14 @@ if ! [ -e laravel-echo-server.json ]; then
   cp laravel-echo-server.example.json laravel-echo-server.json
 fi
 
+sed -i -e "s%{{ ECHO_AUTH_HOST }}%$ECHO_AUTH_HOST%g" laravel-echo-server.json
+sed -i -e "s%{{ ECHO_AUTH_ENDPOINT }}%$ECHO_AUTH_ENDPOINT%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_CLIENTS }}%$ECHO_CLIENTS%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_REDIS_PORT }}%$ECHO_REDIS_PORT%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_REDIS_HOSTNAME }}%$ECHO_REDIS_HOSTNAME%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_DEVMODE }}%$ECHO_DEVMODE%g" laravel-echo-server.json
+sed -i -e "s%{{ ECHO_HOST }}%$ECHO_HOST%g" laravel-echo-server.json
+sed -i -e "s%{{ ECHO_PORT }}%$ECHO_PORT%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_PROTOCOL }}%$ECHO_PROTOCOL%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_SSL_CERT_PATH }}%$ECHO_SSL_CERT_PATH%g" laravel-echo-server.json
 sed -i -e "s%{{ ECHO_SSL_KEY_PATH }}%$ECHO_SSL_KEY_PATH%g" laravel-echo-server.json

@@ -1,6 +1,6 @@
 {
-	"authHost": "http://localhost",
-	"authEndpoint": "/broadcasting/auth",
+	"authHost": "{{ ECHO_AUTH_HOST }}",
+	"authEndpoint": "{{ ECHO_AUTH_ENDPOINT }}",
 	"clients": {{ ECHO_CLIENTS }},
 	"database": "redis",
 	"databaseConfig": {
@@ -10,8 +10,8 @@
 		}
 	},
 	"devMode": "{{ ECHO_DEVMODE }}",
-	"host": null,
-	"port": "6001",
+	"host": {{ ECHO_HOST }},
+	"port": "{{ ECHO_PORT }}",
 	"protocol": "{{ ECHO_PROTOCOL }}",
 	"socketio": {},
 	"sslCertPath": "{{ ECHO_SSL_CERT_PATH }}",
